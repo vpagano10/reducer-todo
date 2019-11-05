@@ -1,5 +1,5 @@
 import React from 'react';
-import AppReducer, { initialState } from '../reducers/AppReducer';
+// import AppReducer, { initialState } from '../reducers/AppReducer';
 
 const TodoForm = () => {
     return (
@@ -8,10 +8,6 @@ const TodoForm = () => {
             type='text'
             name='item'
             placeholder='todo'
-            /><br />
-            <textarea
-            name='notes'
-            placeholder='notes'
             /><br />
             <button type='submit'>Add Todo</button>
         </form>
