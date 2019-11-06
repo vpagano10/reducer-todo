@@ -1,11 +1,17 @@
 import React, { useReducer, useState } from 'react';
-import AppReducer, { initialState } from '../reducers/AppReducer';
-import { Reducer } from '../reducers/AppReducer';
 
-function TodoList() {
+const TodoList = ({ state, dispatch }) => {
+    const toggleItem = todo => {
+        dispatch({ type: 'TOGGLE_COMPLETE', payload: todo });
+    };
+
     return (
         <div>
-            <AppReducer />
+            {state.todos.map(item => (
+                <div>
+                   <p onClick={() => toggleItem(item)}>{item.item}</p>
+                </div>
+            ))}
         </div>
     )
 }
